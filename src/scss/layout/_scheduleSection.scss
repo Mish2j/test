@@ -1,0 +1,93 @@
+.section-schedule {
+  width: 100%;
+  height: 70vh;
+  background-image: url("../images/mountain-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tab {
+  background-color: $color-primary-dark;
+
+  &__list {
+    display: flex;
+
+    @include screen-down($md-screen) {
+      flex-direction: column;
+    }
+  }
+
+  &__btn {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    font-family: "Oswald", sans-serif;
+    cursor: pointer;
+    color: #b0b4be;
+
+    &--active {
+      background-color: #b0b4be;
+      color: $color-primary-dark;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $color-primary-dark;
+      }
+    }
+
+    @include screen-down($md-screen) {
+      width: 100%;
+    }
+  }
+}
+
+.schedule {
+  width: max-content;
+  background-color: #ffffff99;
+  padding: 1rem 4rem;
+
+  color: $color-black;
+
+  margin: 8rem auto auto 3rem;
+
+  @include screen-down($md-screen) {
+    width: 52%;
+    margin: 5rem auto;
+    padding: 1rem 3rem;
+    flex-direction: column;
+    @include flex-center;
+  }
+
+  @include screen-down($sm-screen) {
+    width: 80%;
+    margin: 5rem auto;
+  }
+
+  @include screen-down($xs-screen) {
+    width: 95%;
+    margin: 5rem auto;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__data {
+    display: none;
+  }
+
+  &__data--active {
+    display: flex;
+    gap: 7rem;
+
+    @include screen-down($md-screen) {
+      gap: 5rem;
+    }
+
+    @include screen-down($sm-screen) {
+      gap: 3rem;
+    }
+  }
+}

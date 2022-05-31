@@ -1,0 +1,19 @@
+.team {
+  width: 90%;
+  margin: 0 auto;
+  @include flex-center;
+
+  @include screen-down($md-screen) {
+    flex-direction: column;
+  }
+
+  &__text {
+    color: $color-black;
+    padding-left: 2rem;
+
+    @include screen-down($md-screen) {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+  }
+}

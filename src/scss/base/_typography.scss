@@ -1,0 +1,43 @@
+html {
+  font-size: 62.5%; /* 10px */ /* 10px = 1rem */
+
+  @include screen-up($xl-screen) {
+    font-size: 75%; /*1rem = 12px*/
+  }
+
+  @include screen-down($lg-screen) {
+    font-size: 56.25%; /*1rem = 9px */
+  }
+
+  @include screen-down($md-screen) {
+    font-size: 50%; /*1rem = 8px*/
+  }
+
+  @include screen-down($xs-screen) {
+    word-break: break-word;
+  }
+}
+
+body {
+  font-family: "Lato", arial, verdana, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  &:visited {
+    color: inherit;
+  }
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+  color: $color-primary-dark;
+  font-family: "Oswald", sans-serif;
+}

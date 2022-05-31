@@ -1,0 +1,26 @@
+.footer {
+  background-color: $color-primary-dark;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include screen-down($md-screen) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    display: flex;
+
+    @include screen-down($md-screen) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__copyright {
+    font-size: 1.2rem;
+    color: $color-primary-dark-text;
+  }
+}

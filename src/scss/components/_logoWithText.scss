@@ -1,0 +1,11 @@
+.logo {
+  display: flex;
+  align-items: center;
+  &__text {
+    font-size: 3rem;
+    line-height: 0.8;
+    font-family: "Bebas Neue", cursive;
+    margin-left: 1rem;
+    color: $color-primary-dark-text;
+  }
+}

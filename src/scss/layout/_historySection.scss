@@ -1,0 +1,86 @@
+.section-history {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/peak.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.history {
+  &__text {
+    color: $color-black;
+    font-size: 1.6rem;
+    width: 85%;
+    margin: -4rem auto;
+
+    @include screen-down($md-screen) {
+      text-align: center;
+    }
+  }
+
+  &__slider {
+    background-color: $color-primary-dark-99;
+  }
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  scroll-behavior: smooth;
+
+  &__btn {
+    display: none;
+
+    @include screen-down($md-screen) {
+      display: block;
+      color: $color-primary-light;
+      font-size: 4rem;
+    }
+  }
+
+  &__wrapper {
+    padding: 2rem;
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  @include screen-down($md-screen) {
+    &__img {
+      display: none;
+    }
+
+    &__img--active {
+      display: block;
+    }
+  }
+
+  &__control {
+    text-align: center;
+  }
+
+  &__dot {
+    display: inline-block;
+    color: $color-primary-light-65;
+
+    &--active {
+      color: $color-primary-light;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

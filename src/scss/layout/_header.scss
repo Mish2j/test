@@ -1,0 +1,109 @@
+.header {
+  width: 100%;
+  height: 70vh;
+  background-image: url("../images/hero-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  position: relative;
+
+  .nav {
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list {
+      display: flex;
+
+      @include screen-down($md-screen) {
+        display: none;
+      }
+    }
+
+    &__link {
+      font-size: 1.2rem;
+      color: $color-primary-light;
+      border-bottom: 1px solid $color-primary-light;
+      font-style: italic;
+    }
+
+    li + li {
+      margin-left: 4rem;
+    }
+
+    @include screen-down($md-screen) {
+      &__sm {
+        @include flex-center;
+        flex-direction: column;
+        background-color: $color-primary-dark-99;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1000;
+      }
+
+      &__sm a {
+        font-size: 2.5rem;
+
+        @include screen-down($sm-screen) {
+          font-size: 3rem;
+        }
+
+        @include screen-down($sm-screen) {
+          font-size: 3.5rem;
+        }
+      }
+
+      &__sm li + li {
+        margin-left: 0 !important;
+        margin-top: 3rem;
+      }
+    }
+
+    &__toggle {
+      font-size: 2.3rem;
+      padding: 4px 9px;
+      color: $color-primary-light;
+      cursor: pointer;
+
+      display: none;
+
+      @include screen-down($md-screen) {
+        font-size: 2.5rem;
+        display: block;
+        z-index: 1001;
+      }
+    }
+  }
+
+  .hero {
+    margin: 12rem auto auto 5rem;
+
+    &__intro {
+      line-height: 0.8;
+      font-size: 10.5rem;
+      font-family: "Bebas Neue", cursive;
+      font-weight: 500;
+
+      @include screen-down($md-screen) {
+        font-size: 8.5rem;
+      }
+
+      @include screen-down($sm-screen) {
+        font-size: 7.5rem;
+      }
+
+      &--top {
+        color: $color-logo-dark;
+      }
+
+      &--bottom {
+        color: $color-logo-light;
+      }
+    }
+  }
+}
