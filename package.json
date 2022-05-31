@@ -2,17 +2,20 @@
   "name": "test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
     "clean": "rm -rf dist/* && rm -rf .parcel-cache",
     "build:parcel": "parcel build src/index.html --public-url ./",
-    "build": "npm run clean && npm run build:parcel"
+    "build": "npm run clean && npm run build:parcel",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
     "parcel": "^2.6.0"
+  },
+  "dependencies": {
+    "push-dir": "^0.4.1"
   }
 }
